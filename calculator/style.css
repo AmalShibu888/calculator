@@ -1,0 +1,64 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+/* change background color  and padding*/
+body{
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    background-image : linear-gradient(to right ,rgb(0, 217, 255) , rgb(26, 87, 162));
+    padding-top: 10vh;
+
+}
+
+
+/* designing heading */
+h2{
+    text-align: center;
+    font-size: 3rem;
+    color: aliceblue;
+}
+
+/* creating calculator basic structure */
+.main_body{
+    display: grid;
+    justify-content:center;
+    grid-template-columns: repeat(4,80px);
+    grid-template-rows: minmax(120px , auto) repeat(5,80px);
+}
+
+
+/* designing each button */
+.main_body > button{
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    background-color: rgb(175, 239, 239);
+    margin: 0px;
+}
+
+
+.main_body > button:hover{
+    background-color: rgb(244, 242, 242); /*changing colorwhile hovering*/
+}
+
+
+/* designing output screen */
+.screen{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    background-color: black;
+    color: white;
+    font-size: 2rem;
+    padding-top: 20px;
+    padding-left: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+
+.span{
+    grid-column: span 2; /*spanning for 2 colums*/
+}
